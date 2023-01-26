@@ -1,0 +1,86 @@
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  background-color: #fbcc0d;
+  color: #2b2a2a;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.fixing-wrap {
+  position: absolute;
+  width: 60px;
+  top: 20px;
+  right: 20px;
+}
+
+.burger-btn {
+  position: fixed;
+  padding: 1em;
+  margin-right: 20px;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger-btn:focus {
+  outline: none;
+  border: 0.5px solid rgba(1, 1, 1, 0.5);
+}
+
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  position: absolute;
+  right: 0;
+  height: 2px;
+  content: '';
+  background-color: #2b2a2a;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.burger-btn__bars {
+  width: 100%;
+}
+
+.burger-btn__bars::after {
+  top: 10px;
+  width: 60%;
+}
+
+.burger-btn__bars::before {
+  top: 20px;
+  width: 30%;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+/*# sourceMappingURL=main2.css.map */
