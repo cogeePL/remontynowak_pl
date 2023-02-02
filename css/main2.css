@@ -17,6 +17,7 @@ body {
   font-size: 1.6rem;
   background-color: #fbcc0d;
   color: #2b2a2a;
+  overflow-x: hidden;
 }
 
 .section-head {
