@@ -335,6 +335,10 @@ body {
   }
 }
 
+.header__about-desktop {
+  display: none;
+}
+
 .about {
   position: relative;
   padding-top: 2em;
@@ -682,19 +686,73 @@ footer {
 
 @media (min-width: 767px) {
   .wrapper {
-    max-width: 1000px;
+    max-width: 1200px;
   }
   .header {
     -ms-grid-columns: (1fr)[12];
         grid-template-columns: repeat(12, 1fr);
   }
+  .header .phone {
+    display: none;
+  }
+  .header__phone-number {
+    display: none;
+  }
   .header__img {
     -ms-grid-row: 2;
     -ms-grid-row-span: 9;
     grid-row: 2/11;
-    grid-column: 6/-1;
+    grid-column: 7/-1;
     background-image: url(/img/hero-img-narrow-m.jpg);
     background-size: cover;
+  }
+  .header__logo {
+    background-image: url(/img/logo-wide.png);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1/6;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3/6;
+    margin-left: 20px;
+  }
+  .header__arrow {
+    bottom: 4.5em;
+  }
+  .header__about-desktop {
+    display: inline-block;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 5;
+    grid-row: 6/11;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+    margin-left: 20px;
+  }
+  .header__about-desktop h2 {
+    font-size: 3rem;
+    margin-bottom: .5em;
+  }
+  .header__about-desktop .phone-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 220px;
+    height: 50px;
+    margin-top: 1em;
+    font-weight: 700;
+    background-color: #2b2a2a;
+    color: #fbcc0d;
+  }
+  .header__about-desktop .phone-desktop {
+    height: 36px;
+    margin: 10px;
   }
 }
 /*# sourceMappingURL=main2.css.map */
