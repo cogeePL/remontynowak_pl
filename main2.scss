@@ -1,5 +1,6 @@
 @import 'sass/colors';
 
+
 *,
 ::before,
 ::after {
@@ -18,6 +19,7 @@ body {
 	font-size: 1.6rem;
 	background-color: $main-color;
 	color: $txt-color;
+	overflow-x: hidden;
 }
 
 
@@ -286,6 +288,9 @@ body {
 			opacity: 0;
 		}
 	}
+	&__about-desktop {
+		display: none;
+	}
 }
 
 // ABOUT ME ####################################
@@ -548,3 +553,4 @@ footer {
 	color: rgb(145, 144, 110);
 }
 
+@import 'sass/large';
