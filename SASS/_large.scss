@@ -1,0 +1,20 @@
+@media (min-width: 767px) {
+
+.wrapper {
+    max-width: 1000px;
+}
+
+.header {
+    grid-template-columns: repeat(12, 1fr);
+
+    &__img {
+        grid-row: 2/11;
+        grid-column: 6/-1;
+        background-image: url(/img/hero-img-narrow-m.jpg);
+        background-size: cover;
+
+    }
+}
+
+}
+

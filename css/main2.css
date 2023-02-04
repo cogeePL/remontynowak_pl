@@ -679,4 +679,22 @@ footer {
   font-size: 10px;
   color: #91906e;
 }
+
+@media (min-width: 767px) {
+  .wrapper {
+    max-width: 1000px;
+  }
+  .header {
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+  .header__img {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 9;
+    grid-row: 2/11;
+    grid-column: 6/-1;
+    background-image: url(/img/hero-img-narrow-m.jpg);
+    background-size: cover;
+  }
+}
 /*# sourceMappingURL=main2.css.map */
