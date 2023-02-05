@@ -1,66 +1,115 @@
 @media (min-width: 767px) {
+	.wrapper {
+		max-width: 1200px;
+	}
 
-.wrapper {
-    max-width: 1200px;
+	.header {
+		grid-template-columns: repeat(12, 1fr);
+		overflow-x: hidden;
+		.phone {
+			display: none;
+		}
+		&__phone-number {
+			display: none;
+		}
+
+		&__img {
+			grid-row: 2/11;
+			grid-column: 7/-1;
+			background-image: url(/img/hero-img-narrow-m.jpg);
+			background-size: cover;
+		}
+
+		&__logo {
+			background-image: url(/img/logo-wide.png);
+			grid-column: 1/6;
+			grid-row: 3/6;
+			margin-left: 20px;
+		}
+
+		&__arrow {
+			bottom: 3.5em;
+		}
+
+		&__about-desktop {
+			display: inline-block;
+			grid-row: 6/11;
+			grid-column: 1/7;
+			margin-left: 20px;
+
+			h2 {
+				font-size: 3rem;
+				margin-bottom: 0.5em;
+				padding-top: 0.5em;
+				border-top: solid 2px $txt-color;
+			}
+
+			.phone-button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 220px;
+				height: 50px;
+				margin-top: 1em;
+				font-weight: 700;
+				background-color: $txt-color;
+				color: $main-color;
+			}
+			.phone-desktop {
+				height: 36px;
+				margin: 10px;
+			}
+		}
+	}
+
+	.about {
+		display: none;
+	}
+
+	.service-boxes {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 1em;
+		overflow-x: hidden;
+
+		.service-box {
+			width: 320px;
+		}
+	}
+	.gallery {
+		justify-content: center;
+	}
+
+	.thumbnail {
+		max-width: 320px;
+		max-height: 193px;
+		margin: 10px;
+	}
+
+	.contact-box {
+		display: none;
+	}
+    .contact-box-desktop {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .contact-logo {
+        width: 20vw;
+        height: 200px;
+        margin: 25px;
+    }
+    .contact-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        // background-color: #fff;
+        padding: 20px;
+        margin: 25px;
+        height: 200px;
+        width: 40vw;
+
+    }
 }
-
-.header {
-    grid-template-columns: repeat(12, 1fr);
-    .phone {
-        display: none;
-    }
-    &__phone-number {
-        display: none;
-    }
-
-
-    &__img {
-        grid-row: 2/11;
-        grid-column: 7/-1;
-        background-image: url(/img/hero-img-narrow-m.jpg);
-        background-size: cover;
-    }
-
-    &__logo {
-        background-image: url(/img/logo-wide.png); 
-        grid-column: 1/6;
-        grid-row: 3/6;
-        margin-left: 20px;
-    }
-
-    &__arrow {
-        bottom: 4.5em;
-    }
-
-    &__about-desktop {
-        display: inline-block;
-        grid-row: 6/11;
-        grid-column: 1/7;
-        margin-left: 20px;
-
-        h2 {
-            font-size: 3rem;
-            margin-bottom: .5em;
-        }
-
-        .phone-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 220px;
-            height: 50px;
-            margin-top: 1em;
-            font-weight: 700;
-            background-color: $txt-color;
-            color: $main-color;
-        
-        
-        }.phone-desktop {
-            height: 36px;
-            margin: 10px;
-        }
-    }
-}
-
-}
-
