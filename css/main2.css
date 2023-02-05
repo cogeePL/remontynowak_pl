@@ -362,7 +362,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 1em;
-  margin-top: 1em;
+  margin: 10px 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -640,6 +640,26 @@ body {
           transform: rotate(45deg);
 }
 
+.contact-logo {
+  position: relative;
+  height: 200px;
+  width: 150px;
+  margin-bottom: 20px;
+  background-image: url(/img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sopro {
+  width: 80px;
+  margin: 15px;
+}
+
+.sopro-txt {
+  font-size: 12px;
+}
+
 footer {
   width: 100vw;
   display: -webkit-box;
@@ -659,26 +679,6 @@ footer {
   padding-bottom: 5px;
 }
 
-.contact-logo {
-  position: relative;
-  height: 200px;
-  width: 150px;
-  margin-bottom: 20px;
-  background-image: url(/img/logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.sopro {
-  width: 80px;
-  margin: 20px;
-}
-
-.sopro-txt {
-  font-size: 12px;
-}
-
 .signature {
   font-size: 10px;
   color: #91906e;
@@ -691,6 +691,7 @@ footer {
   .header {
     -ms-grid-columns: (1fr)[12];
         grid-template-columns: repeat(12, 1fr);
+    overflow-x: hidden;
   }
   .header .phone {
     display: none;
@@ -717,7 +718,7 @@ footer {
     margin-left: 20px;
   }
   .header__arrow {
-    bottom: 4.5em;
+    bottom: 3.5em;
   }
   .header__about-desktop {
     display: inline-block;
@@ -731,7 +732,9 @@ footer {
   }
   .header__about-desktop h2 {
     font-size: 3rem;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+    border-top: solid 2px #2b2a2a;
   }
   .header__about-desktop .phone-button {
     display: -webkit-box;
@@ -753,6 +756,72 @@ footer {
   .header__about-desktop .phone-desktop {
     height: 36px;
     margin: 10px;
+  }
+  .about {
+    display: none;
+  }
+  .service-boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1em;
+    overflow-x: hidden;
+  }
+  .service-boxes .service-box {
+    width: 320px;
+  }
+  .gallery {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .thumbnail {
+    max-width: 320px;
+    max-height: 193px;
+    margin: 10px;
+  }
+  .contact-box {
+    display: none;
+  }
+  .contact-box-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .contact-logo {
+    width: 20vw;
+    height: 200px;
+    margin: 25px;
+  }
+  .contact-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+    margin: 25px;
+    height: 200px;
+    width: 40vw;
   }
 }
 /*# sourceMappingURL=main2.css.map */
