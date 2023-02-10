@@ -20,6 +20,11 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: #2b2a2a;
+  text-decoration: none;
+}
+
 .section-head {
   color: #2b2a2a;
   font-weight: 700;
@@ -620,6 +625,10 @@ body {
   background-color: #fff;
 }
 
+.contact-box a {
+  color: #2b2a2a;
+}
+
 .contact-icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -755,6 +764,9 @@ footer {
     margin-top: 1em;
     font-weight: 700;
     background-color: #2b2a2a;
+    color: #fbcc0d;
+  }
+  .header__about-desktop .phone-button a {
     color: #fbcc0d;
   }
   .header__about-desktop .phone-desktop {

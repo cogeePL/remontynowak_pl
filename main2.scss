@@ -22,6 +22,10 @@ body {
 	overflow-x: hidden;
 }
 
+a {
+	color: $txt-color;
+	text-decoration: none;
+}
 
 .section-head {
 	color: $txt-color;
@@ -503,6 +507,10 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: #fff;
+}
+
+.contact-box a {
+	color: $txt-color;
 }
 .contact-icon {
 	display: flex;
