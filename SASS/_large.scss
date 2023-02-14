@@ -3,6 +3,12 @@
 		max-width: 1200px;
 	}
 
+	.arrow-mobile {
+		display: none;
+	}
+.arrow-desktop {
+	display: block;
+}
 	.header {
 		grid-template-columns: repeat(12, 1fr);
 		overflow-x: hidden;
@@ -27,9 +33,38 @@
 			margin-left: 20px;
 		}
 
-		&__arrow {
-			bottom: 3.5em;
-		}
+		
+			&__arrow {
+				display: block;
+				position: absolute;
+				bottom: 1.5em;
+				left: 50%;
+				transform: translate(-50%) rotate(135deg);
+				padding: 0.25em;
+				bottom: 3.5em;
+				&::before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					content: '';
+					width: 100%;
+					height: 80%;
+					border: 0.35px solid black;
+					// border-radius: 50%;
+					animation: pulse 2s infinite;
+				}
+			}
+			@keyframes pulse {
+				from {
+					transform: scale(1);
+					opacity: 0.5;
+				}
+				to {
+					transform: scale(1.4);
+					opacity: 0;
+				}
+			}
+		
 
 		&__about-desktop {
 			display: inline-block;
@@ -54,10 +89,10 @@
 				font-weight: 700;
 				background-color: $txt-color;
 				color: $main-color;
-			
-			a {
-				color: $main-color;
-			}
+
+				a {
+					color: $main-color;
+				}
 			}
 			.phone-desktop {
 				height: 36px;
@@ -94,26 +129,25 @@
 	.contact-box {
 		display: none;
 	}
-    .contact-box-desktop {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    .contact-logo {
-        width: 20vw;
-        height: 200px;
-        margin: 25px;
-    }
-    .contact-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: #fff;
-        padding: 20px;
-        margin: 25px;
-        height: 200px;
-        width: 40vw;
-
-    }
+	.contact-box-desktop {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+	.contact-logo {
+		width: 20vw;
+		height: 200px;
+		margin: 25px;
+	}
+	.contact-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		background-color: #fff;
+		padding: 20px;
+		margin: 25px;
+		height: 200px;
+		width: 40vw;
+	}
 }

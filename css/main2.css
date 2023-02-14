@@ -86,6 +86,10 @@ a {
   position: relative;
 }
 
+.arrow-desktop {
+  display: none;
+}
+
 .fixing-wrap {
   position: absolute;
   width: 60px;
@@ -105,7 +109,6 @@ a {
 
 .burger-btn:focus {
   outline: none;
-  border: 0.5px solid rgba(1, 1, 1, 0.5);
 }
 
 .burger-btn:hover .burger-btn__bars::after,
@@ -701,6 +704,12 @@ footer {
   .wrapper {
     max-width: 1200px;
   }
+  .arrow-mobile {
+    display: none;
+  }
+  .arrow-desktop {
+    display: block;
+  }
   .header {
     -ms-grid-columns: (1fr)[12];
         grid-template-columns: repeat(12, 1fr);
@@ -731,7 +740,49 @@ footer {
     margin-left: 20px;
   }
   .header__arrow {
+    display: block;
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    -webkit-transform: translate(-50%) rotate(135deg);
+            transform: translate(-50%) rotate(135deg);
+    padding: 0.25em;
     bottom: 3.5em;
+  }
+  .header__arrow::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 80%;
+    border: 0.35px solid black;
+    -webkit-animation: pulse 2s infinite;
+            animation: pulse 2s infinite;
+  }
+  @-webkit-keyframes pulse {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 0.5;
+    }
+    to {
+      -webkit-transform: scale(1.4);
+              transform: scale(1.4);
+      opacity: 0;
+    }
+  }
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 0.5;
+    }
+    to {
+      -webkit-transform: scale(1.4);
+              transform: scale(1.4);
+      opacity: 0;
+    }
   }
   .header__about-desktop {
     display: inline-block;
