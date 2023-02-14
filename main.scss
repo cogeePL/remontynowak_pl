@@ -1,5 +1,6 @@
 @import 'sass/colors';
 
+
 *,
 ::before,
 ::after {
@@ -16,18 +17,14 @@ html {
 body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
-	background-color: $ground-color;
+	background-color: $main-color;
 	color: $txt-color;
+	overflow-x: hidden;
 }
 
-.wrapper {
-	
-	max-width: 1200px;
-	justify-content: center;
-	margin: 0 auto;
-	overflow: hidden;
-    // padding-left: 20px;
-    // padding-right: 20px;
+a {
+	color: $txt-color;
+	text-decoration: none;
 }
 
 .section-head {
@@ -40,7 +37,7 @@ body {
 	position: relative;
 	height: 2px;
 	width: 35vw;
-	background-color: $ground-color;
+	background-color: $main-color;
 	padding-top: 0.5em;
 	margin-bottom: 1em;
 	margin-top: 1em;
@@ -63,7 +60,7 @@ body {
 	transform: translateX(60%) rotate(45deg);
 	height: 324px;
 	width: 324px;
-	background-color: $ground-color;
+	background-color: $main-color;
 	margin-bottom: 2em;
 	opacity: 0.2;
 	z-index: 0;
@@ -83,16 +80,38 @@ body {
 	color: $txt-color;
 }
 
-// NAVIGATION ##############################
 
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+    position: relative;
+}
+
+.arrow-desktop {
+	display: none;
+}
+
+// NAVIGATION ##########################
+
+.fixing-wrap {
+    position: absolute;
+    width: 60px;
+    top:20px;
+    right:20px;
+}
 .burger-btn {
 	position: fixed;
-	right: 20px;
-	padding: 1.5em;
+	padding: 1em;
+    margin-right: 20px;
 	background: none;
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 1000;
+
+	&:focus {
+		outline: none;
+		// border: 0.5px solid rgba(1, 1, 1, 0.5);
+	}
 
 	&:hover {
 		.burger-btn__bars::after,
@@ -114,7 +133,7 @@ body {
 		right: 0;
 		height: 2px;
 		content: '';
-		background-color: $main-color;
+		background-color: $txt-color;
 		transition: width 0.3s;
 	}
 
@@ -133,11 +152,10 @@ body {
 		}
 	}
 }
-
 .nav {
 	position: fixed;
 	top: 0;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -146,7 +164,6 @@ body {
 	background-image: linear-gradient(28deg, rgba(195, 112, 34, 1) 0%, rgba(251, 204, 13, 1) 50%);
 	z-index: 100;
 	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
-
 	&--active {
 		transform: translateX(0);
 	}
@@ -157,7 +174,7 @@ body {
 		margin: 0.5em 0;
 		padding: 0.5em 2em;
 		font-size: 2.8rem;
-		color: $main-color;
+		color: $txt-color;
 		text-decoration: none;
 
 		&::before {
@@ -167,7 +184,7 @@ body {
 			width: 3px;
 			height: 100%;
 			transform: scaleY(0);
-			background-color: $main-color;
+			background-color: $txt-color;
 			transition: transform 0.3s;
 			content: '';
 		}
@@ -176,35 +193,34 @@ body {
 			transform: scaleY(1);
 		}
 	}
+
 }
 
-// HEADER #######################################
-    // .phone-desktop {
-    //     display: none;
-    // }
+// HEADER ##########################
+
 .header {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(12, 1fr);
-	width: 100vw;
 	height: 100vh;
 	position: relative;
 
-    .phone {
-		position: absolute;
-		top: 20px;
-        // margin-left: 20px;        
-	}
-
-
-
-	.phone-number {
+	&__phone-number {
 		position: absolute;
 		grid-column: 1/3;
 		font-weight: 700;
 		font-size: 1.4rem;
-		left: 50px;
+		left: 45px;
 		top: 20px;
+		padding-top: 1em;
+	}
+
+	.phone {
+		height: 30px;
+		position: absolute;
+		top: 30px;
+		left: 20px;
+		transform: rotate(15deg);
 	}
 
 	&__text {
@@ -225,15 +241,14 @@ body {
 			margin-top: 2rem;
 		}
 	}
-	.wrapper .logo {
+	&__logo {
 		grid-row: 2/4;
-		grid-column: 1/5;
-		position: absolute;
+		grid-column: 1/-1;
+		position: relative;
 		width: 100%;
 		height: 100%;
-        margin-top: 40px;
 		padding: 35px;
-		background-image: url(../img/logo.png);
+		background-image: url(/img/logo.png);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -242,10 +257,10 @@ body {
 		top: 0px;
 		grid-row: 4/12;
 		grid-column: 1/-1;
-		position: absolute;
+		position: relative;
 		width: 100%;
 		height: 100%;
-		background-image: url(../img/hero-img-narrow-s.jpg);
+		background-image: url(/img/hero-img-narrow-s.jpg);
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -254,7 +269,7 @@ body {
 	&__arrow {
 		display: block;
 		position: absolute;
-		bottom: 2rem;
+		bottom: 1.5em;
 		left: 50%;
 		transform: translate(-50%) rotate(135deg);
 		padding: 0.25em;
@@ -267,6 +282,7 @@ body {
 			width: 100%;
 			height: 80%;
 			border: 0.35px solid black;
+			// border-radius: 50%;
 			animation: pulse 2s infinite;
 		}
 	}
@@ -280,4 +296,277 @@ body {
 			opacity: 0;
 		}
 	}
+	&__about-desktop {
+		display: none;
+	}
 }
+
+// ABOUT ME ####################################
+
+.about {
+	position: relative;
+	padding-top: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 3em;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+// SERVICE #####################################
+
+
+.service {
+	position: relative;
+	padding-top: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 2em;
+}
+
+.service-box {
+	display: flex;
+	padding: 1em;
+	margin: 10px 10px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+}
+
+.service-icon {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	align-items: center;
+	justify-content: center;
+	background-color: $main-color;
+	transform: rotate(45deg);
+}
+
+.fa-solid {
+	transform: rotate(-45deg);
+}
+
+.service-txt {
+	text-align: center;
+}
+
+// PORTFOLIO #####################################
+
+.portfolio {
+	background-color: #fff;
+	position: relative;
+	padding-top: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 2em;
+	overflow-x: hidden;
+}
+
+.gallery {
+	margin-top: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+.thumbnail {
+	max-width: 120px;
+	max-height: 80px;
+	overflow: hidden;
+	margin-bottom: 12px;
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+
+.thumbnail:hover {
+	transform: scale(1.2);
+}
+
+.thumbnail img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	padding: 2px;
+	border: $main-color 2px solid;
+}
+
+.popup {
+	position: fixed;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	background: rgba(252, 185, 2, 0.548);
+	backdrop-filter: blur(10px);
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	animation: fadeIn 0.3s;
+	z-index: 50;
+}
+
+.popup.hidden {
+	display: none;
+}
+
+.fade-out {
+	animation: fadeOut 5s both;
+}
+
+.popup-img {
+	max-height: 80%;
+	max-width: 90%;
+	border: solid #fff 10px;
+}
+
+.popup-close {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	top: 20px;
+	font-size: 32px;
+	background-color: transparent;
+	color: $txt-color;
+	border: none;
+	z-index: 20;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.popup-close:hover {
+	transform: scale(1.5);
+}
+
+.popup-arrow {
+	position: absolute;
+	font-size: 32px;
+	background-color: transparent;
+	color: $txt-color;
+	border: none;
+	z-index: 20;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.popup-arrow:hover {
+	transform: scale(1.5);
+}
+
+.popup-arrow-left {
+	left: 10px;
+	bottom: 20px;
+}
+.popup-arrow-right {
+	right: 10px;
+	bottom: 20px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+//CONTACT ############################################
+
+.contact {
+	position: relative;
+	padding-top: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 3em;
+	background-color: $main-color;
+	width: 100vw;
+	overflow: hidden;
+	z-index: 10;
+}
+
+.contact p {
+	margin-bottom: 1em;
+}
+.contact-box {
+	display: flex;
+	padding: 1em;
+	margin-top: 1em;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+}
+
+.contact-box a {
+	color: $txt-color;
+}
+.contact-icon {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	align-items: center;
+	justify-content: center;
+	background-color: $main-color;
+	transform: rotate(45deg);
+}
+
+
+.contact-logo {
+	position: relative;
+	height: 200px;
+	width: 150px;
+	// padding: 35px;
+	margin-bottom: 20px;
+	background-image: url(/img/logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.sopro {
+	width: 80px;
+	margin: 15px;
+}
+.sopro-txt {
+	font-size: 12px;
+}
+
+.contact-box-desktop {
+	display: none;
+}
+// FOOTER ################################################
+
+footer {
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-end;
+	background-color: $txt-color;
+	color: $main-color;
+	padding-bottom: 5px;
+}
+.signature {
+	font-size: 10px;
+	color: rgb(145, 144, 110);
+}
+
+@import 'sass/large';

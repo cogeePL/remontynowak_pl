@@ -15,183 +15,211 @@
 
 <body>
 
-    <!-- NAVIGATION  ############################## -->
-
-    <nav class="nav">
-        <div class="nav__items">
-            <a href="#aboutme" class="nav__item">O mnie</a>
-            <a href="#services" class="nav__item">Usługi</a>
-            <a href="#gallery" class="nav__item">Realizacje</a>
-            <a href="#contact" class="nav__item">Kontakt</a>
+    <!-- NAVIGATION ############################## -->
+    <nav class="navigation">
+        <div class="wrapper">
+            <div class="fixing-wrap">
+                <button class="burger-btn">
+                    <div class="burger-btn__box">
+                        <div class="burger-btn__bars"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav__items">
+                <a href="#aboutme" class="nav__item">O mnie</a>
+                <a href="#services" class="nav__item">Usługi</a>
+                <a href="#portfolio" class="nav__item">Realizacje</a>
+                <a href="#contact" class="nav__item">Kontakt</a>
+            </div>
         </div>
     </nav>
 
-    <!-- HEADER #############################     -->
-
-    <header class="header">
-        <button class="burger-btn">
-            <div class="burger_btn__box">
-                <div class="burger-btn__bars"></div>
-            </div>
-        </button>
-        <div class="wrapper">
-            <img class="phone" src="/img/icons/phone.svg">
-
-            <div class="phone-number">+48 503 146 477</div>
-            <div class="logo"></div>
-            <div class="header__text">
-
-                <!-- <div class="phone-desktop">
-                    <img class="phone-icon-desktop" src="/img/icons/phone-yellow.svg">+48
-                    503 146 477
-                </div> -->
-            </div>
-            <div class="header__img"></div>
-            <a href="#aboutme">
-                <div class="header__arrow">
-                    <img class='header__arrow-icon' src="/img/icons/arrow.svg" alt="">
-                </div>
-            </a>
+    <!-- HEADER ####################################-->
+    <header class="header section wrapper">
+        <img class="phone" src="/img/icons/phone.svg">
+        <div class="header__phone-number"><a href="tel:+48503146477">+48 503 146 477</a></div>
+        <div class="header__logo"></div>
+        <div class="header__text">
         </div>
+        <div class="header__img">
+        </div>
+        <div class="arrow-desktop">
+          <a href="#services">
+            <div class="header__arrow">
+                <img class='header__arrow-icon' src="/img/icons/arrow.svg" alt="">
+            </div>
+        </a>  
+        </div>
+        
+        <div class="arrow-mobile">
+         <a href="#aboutme">
+            <div class="header__arrow">
+                <img class='header__arrow-icon' src="/img/icons/arrow.svg" alt="">
+            </div>
+        </a>   
+        </div>
+        
+        <div class="header__about-desktop">
+            <h2 class="about__section-head">Remonty,<br> prace wykończeniowe, fliziarstwo</h2>
+            <p class="about__txt">Nazywam się Jarek Nowak i zajmuję się pracami wykończeniowymi i remontami. Posiadam
+                doświadczenie w budownictwie mieszkaniowym i przy wykańczaniu inwestycji komercyjnych.
+                Doradzam w kwestii doboru materiałów niezbędnych przy wykończeniu wnętrz, pomogę w ich zakupie w bardzo
+                konkurencyjnych cenach. Pracuję w Krakowie i okolicach<br>
+                Polecam się, zapraszam do kontaktu!</p>
+            <div class="phone-button">
+                <img class="phone-desktop" src="/img/icons/phone-yellow.svg">
+                <div class="phone-number"><a href="tel:+48503146477">+48 503 146 477</a></div>
+            </div>
+        </div>
+
     </header>
 
-    <!-- ABOUT ME ################################### -->
-
+    <!-- ABOUT ME ###################################-->
     <section class="about" id="aboutme">
         <div class="wrapper">
-            <h2 class="section-head">Remonty,<br> prace wykończeniowe,<br> fliziarstwo</h2>
-            <div class="title-line-white"></div>
+            <h2 class="about__section-head">Remonty,<br> prace wykończeniowe,<br> fliziarstwo</h2>
+            <div class="title-line-yellow"></div>
             <div class="title-sqr-yellow"></div>
             <p class="about__txt">Nazywam się Jarek Nowak i zajmuję się pracami wykończeniowymi i remontami. Posiadam
                 doświadczenie w budownictwie mieszkaniowym i przy wykańczaniu inwestycji komercyjnych.
                 Doradzam w kwestii doboru materiałów niezbędnych przy wykończeniu wnętrz, pomogę w ich zakupie w bardzo
-                konkurencyjnych cenach. Pracuję w Krakowie i okolicach.<br>
-                Polecam się!</p>
+                konkurencyjnych cenach. Pracuję w Krakowie i okolicach<br>
+                Polecam się, zapraszam do kontaktu!</p>
         </div>
     </section>
 
-    <!-- SERVICES #################################### -->
-
+    <!-- SERVICES ################################-->
     <section class="service" id="services">
         <div class="wrapper">
             <h2 class="section-head">Remont od A do Z</h2>
             <div class="title-line-white"></div>
             <div class="title-sqr-white"></div>
-            <p class="section-txt">Remontuję i wykańczam nowe wnętrza. Zakres każdego zlecenia planujemy wspólnie z
+            <p class="about__txt">Remontuję i wykańczam nowe wnętrza. Zakres każdego zlecenia planujemy wspólnie z
                 inwestorem. Jestem gotów podjąć się wykonania wybranych etapów jak i kompleksowego wykończenia wnętrz
                 “na gotowo”. Pozostanie już tylko wniesienie i ustawienie mebli… </p>
-            <div class="service__boxes">
-                <div class="service__boxes--item">
+            <div class="service-boxes">
+                <div class="service-box">
                     <div class="service-icon"><i class="fa-solid fa-trowel"></i></div>
                     <h3 class="service-title">Flizowanie</h3>
                     <p class="service-txt">Tak po krakowsku kafelkujemy</p>
                 </div>
-                <div class="service__boxes--item">
+                <div class="service-box">
                     <div class="service-icon"><i class="fa-solid fa-ruler-combined"></i></div>
                     <h3 class="service-title">Zabudowy regips</h3>
                     <p class="service-txt">Ścianki działowe, wnęki, zabudowa poddaszy</p>
                 </div>
-                <div class="service__boxes--item">
+                <div class="service-box">
                     <div class="service-icon"><i class="fa-solid fa-sink"></i></div>
                     <h3 class="service-title">Biały montaż i armatura</h3>
                     <p class="service-txt">Umywalki, sedesy, krany, wanny… </p>
                 </div>
-                <div class="service__boxes--item">
+                <div class="service-box">
                     <div class="service-icon"><i class="fa-solid fa-hammer"></i></div>
                     <h3 class="service-title">Stolarka wewnętrzna</h3>
                     <p class="service-txt">Podłogi, ościeżnice, drzwi, listwy, zabudowy</p>
                 </div>
-                <div class="service__boxes--item">
+                <div class="service-box">
                     <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
                     <h3 class="service-title">Malowanie wnętrz</h3>
                     <p class="service-txt">Przygotowanie ścian i malowanie ścian wewnętrznych</p>
                 </div>
-                <div class="service__boxes--item">
+                <div class="service-box">
                     <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
                     <h3 class="service-title">Montaż lamp</h3>
                     <p class="service-txt">Montaż halogenów LED w sufitach podwieszanych itp.</p>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- PORTFOLIO ############################# -->
-
-    <div class="portfolio" id="portfolio">
+    <!-- PRTFOLIO ##################################-->
+    <section class="portfolio" id="portfolio">
         <div class="wrapper">
             <h2 class="section-head">Realizacje</h2>
-            <div class="title-line-white"></div>
-            <p class="section-txt">Zapraszam do obejrzenia wybranych realizacji</p>
+            <div class="title-line-yellow"></div>
+
+            <p class="about__txt">Zapraszam do obejrzenia wybranych realizacji</p>
             <ul class="gallery">
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys1.jpg"
-                        alt="Zdjęcie wnętrza - klatka schodowa"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys2.jpg"
-                        alt="Zdjęcie wnętrza - łazienka"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys3.jpg"
-                        alt="Zdjęcie wnętrza - umywalka"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys4.jpg"
-                        alt="Zdjęcie wnętrza - toaleta"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys5.jpg"
-                        alt="Zdjęcie wnętrza - wanna"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys6.jpg"
-                        alt="Zdjęcie wnętrza - wanna"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys7.jpg"
-                        alt="Zdjęcie wnętrza - łazienka"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys8.jpg"
-                        alt="Zdjęcie wnętrza - pokój kapielowy"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys9.jpg"
-                        alt="Zdjęcie wnętrza - łazienka"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys13.jpg"
-                        alt="Zdjęcie wnętrza - łazienka"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys11.jpg"
-                        alt="Zdjęcie wnętrza - łazienka"></li>
-                <li class="thumbnail"><img tabindex="0" src="./img/gallery/gallery_s/glrys12.jpg"
-                        alt="Zdjęcie wnętrza - łazienka"></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys1.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys2.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys3.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys4.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys5.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys6.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys7.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys8.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys9.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys13.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys11.jpg" alt=""></li>
+                <li class="thumbnail"><img tabindex="0" src="./img/gallery/glrys12.jpg" alt=""></li>
             </ul>
             <div class="popup hidden">
                 <button aria-label="Zamknij popup" class="popup-close">X</button>
                 <img src="./img/gallery/gallery_s/glrys1.jpg" alt="" class="popup-img">
                 <button aria-label="Przewijanie w tył" class="popup-arrow popup-arrow-left">
-                    <p>
-                    <pre><</pre>
-                    </p>
+                    <p> &#60; </p>
                 </button>
                 <button aria-label="Przewijanie w przód" class="popup-arrow popup-arrow-right">
-                    <p>
-                    <pre>></pre>
-                    </p>
+                    <p>></p>
                 </button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- CONTACT ############################# -->
-
+    <!--CONTACT ####################################-->
     <section class="contact" id="contact">
         <div class="wrapper">
             <h2 class="section-head">Kontakt</h2>
             <div class="title-line-white"></div>
             <div class="title-sqr-white"></div>
-            <p clas-whabout__txt">Zapraszam do kontaktu telefonicznego jak i poprzez e-mail</p>
-            <h3>+48 503 146 477</h3>
-            <h3>jarek@remontynowak.pl</h3>
+            <p class="about__txt">Zapraszam do kontaktu telefonicznego jak i poprzez e-mail</p>
+            <!-- <h3>+48 503 146 477</h3>
+            <h3>jarek@remontynowak.pl</h3> -->
+
+            <div class="contact-box">
+                <div class="contact-logo"></div>
+                <h3>+48 503 146 477</h3>
+                <a href="mailto:jarek@remontynowak.pl">
+                    <h3>jarek@remontynowak.pl</h3>
+                </a>
+
+                <img src="/IMG/sopro300x110.gif" alt="" class="sopro">
+
+                <p class="sopro-txt">Autoryzowany Partner firmy SOPRO</p>
+            </div>
+            <div class="contact-box-desktop">
+                <div class="contact-logo"></div>
+                <div class="contact-card">
+                    <a href="tel:+48503146477">
+                        <h3>+48 503 146 477</h3>
+                    </a>
+                    <a href="mailto:jarek@remontynowak.pl">
+                        <h3>jarek@remontynowak.pl</h3>
+                    </a>
+
+                    <img src="/IMG/sopro300x110.gif" alt="" class="sopro">
+
+                    <p class="sopro-txt">Autoryzowany Partner firmy SOPRO</p>
+                </div>
+            </div>
         </div>
+
     </section>
-
-    <!-- FOOTER ############################# -->
-
     <footer>
+
         <p class="footer-txt"> &copy; Jarosław Nowak</p>
-        <p class="signature">made by <span>PK</span></p>
+        <!-- <p class="signature">made by <span>PK</span></p> -->
+
     </footer>
 
-    <!-- JS FILES ############################# -->
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/gallery.js"></script>
 
+    <!-- JAVA_SCRIPT INJECTION ############################# -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 
 </html>
