@@ -22,12 +22,12 @@
 		&__img {
 			grid-row: 2/11;
 			grid-column: 7/-1;
-			background-image: url(./IMG/hero-img-narrow-m.jpg);
+			background-image: url(../IMG/hero-img-narrow-m.jpg);
 			background-size: cover;
 		}
 
 		&__logo {
-			background-image: url(./IMG/logo-wide.png);
+			background-image: url(../IMG/logo-wide.png);
 			grid-column: 1/6;
 			grid-row: 3/6;
 			margin-left: 20px;
