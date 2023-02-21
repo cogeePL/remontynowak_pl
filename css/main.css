@@ -273,7 +273,7 @@ a {
   width: 100%;
   height: 100%;
   padding: 35px;
-  background-image: url(/img/logo.png);
+  background-image: url(../IMG/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -288,7 +288,7 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url(/img/hero-img-narrow-s.jpg);
+  background-image: url(.././IMG/hero-img-narrow-s.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -657,7 +657,7 @@ a {
   height: 200px;
   width: 150px;
   margin-bottom: 20px;
-  background-image: url(/img/logo.png);
+  background-image: url(./IMG/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
