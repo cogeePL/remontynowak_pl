@@ -273,7 +273,7 @@ a {
   width: 100%;
   height: 100%;
   padding: 35px;
-  background-image: url("./IMG/logo.png");
+  background-image: url("./../IMG/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -288,7 +288,7 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url("../IMG/hero-img-narrow-s.jpg");
+  background-image: url("../../IMG/hero-img-narrow-s.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -657,7 +657,7 @@ a {
   height: 200px;
   width: 150px;
   margin-bottom: 20px;
-  background-image: url(./IMG/logo.png);
+  background-image: url("../../IMG/logo.png);
   z-index: 1001;
   background-size: contain;
   background-repeat: no-repeat;
@@ -727,11 +727,11 @@ footer {
     -ms-grid-row-span: 9;
     grid-row: 2/11;
     grid-column: 7/-1;
-    background-image: url(".././IMG/hero-img-narrow-m.jpg");
+    background-image: url("../../IMG/hero-img-narrow-m.jpg");
     background-size: cover;
   }
   .header__logo {
-    background-image: url("/IMG/logo-wide.png');
+    background-image: url("../../IMG/logo-wide.png');
     -ms-grid-column: 1;
     -ms-grid-column-span: 5;
     grid-column: 1/6;
